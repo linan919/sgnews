@@ -1,4 +1,4 @@
-## SGNews
+## SGNews介绍
 
 一款基于Vue.JS的移动端Web页面
 
