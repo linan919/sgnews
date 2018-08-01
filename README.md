@@ -1,6 +1,6 @@
 # sgnews
 
-> A Vue.js project
+> 某市新闻网站，是一款基于Vue.JS的移动端Web程序。
 
 ## Build Setup
 
