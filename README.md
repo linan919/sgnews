@@ -1,35 +1,21 @@
-## 介绍
+# sgnews
 
-某市新闻网站，一款基于Vue.JS的移动端Web程序。
+> A Vue.js project
 
-### Markdown
+## Build Setup
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+``` bash
+# install dependencies
+npm install
 
-```markdown
-Syntax highlighted code block
+# serve with hot reload at localhost:8080
+npm run dev
 
-# Header 1
-## Header 2
-### Header 3
+# build for production with minification
+npm run build
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+# build for production and view the bundle analyzer report
+npm run build --report
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/liginini/SGNews/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
