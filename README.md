@@ -1,6 +1,7 @@
 # sgnews
 
 > 某市新闻网站，是一款基于Vue.JS的移动端Web程序。
+> 预览链接：https://liginini.github.io/sgnews/
 
 ## Build Setup
 
