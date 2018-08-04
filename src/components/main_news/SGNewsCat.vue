@@ -1,15 +1,12 @@
 // 模板
 <template>
-	<div id="sg-news-cat">
+	<div id="sg-news-cat" ref="demo">
 		<ul :style="{maxHeight:sgListMaxHeight}">
-			<li v-for="(catItem,index) in catItems" :key="catItem.enName+'_'+index"><a>{{catItem.name}}</a></li>
-			<li @click="sgSpreadBtnClick"><a><svg class="icon" aria-hidden="true" v-html="sgSpreadIcon"></svg></a></li>
+			<li v-for="(catItem,index) in catItems" :key="catItem.enName+'_'+index"><a class="sg-cat-item">{{catItem.name}}</a></li>
+			<li @click="sgSpreadBtnClick"><a class="sg-cat-item"><svg class="icon" aria-hidden="true" v-html="sgSpreadIcon"></svg></a></li>
 		</ul>
 	</div>
 </template>
-
-
-
 
 
 
@@ -70,64 +67,79 @@ export default {
 
 
 
-
-
 // 样式
 <style scoped lang="scss">
-@import "../assets/css/sg_common.scss";
+@import "../../assets/css/sg_common.scss";
 
 #sg-news-cat {
 	width: 100%;
+	box-sizing: border-box;
+	overflow: hidden;
+	margin-top: 0.5rem;
+	padding: 0rem;
 	// background-color: aquamarine;
 	ul {
-		// background-color: antiquewhite;
+		// background-color: gray;
 		display: block;
-		text-align: left;
-		padding: 0rem;
-		margin: 0.2rem 0rem 0rem 0rem;
-		position: relative;
+		box-sizing: border-box;
 		overflow: hidden;
+		position: relative;
+
+		padding: 0;
+		margin: 0 auto;
+		width: 90%;
+
+		text-align: left;
+
 		transition: all 0.3s linear;
 		li {
 			// background-color: aquamarine;
 			display: inline-block;
 			padding: 0rem;
 			margin: 0rem;
-			&:last-child {
+			&:last-child { //展开按钮 $body-bg-color
 				background-color: $body-bg-color;
 				position: absolute;
 				bottom: 0rem;
-				right: 1.5rem;
-				@media screen and (min-width: 768px) and (max-width: 1023px) {
-					right: 1.66rem;
-				}
-				@media screen and (min-width: 1024px) {
-					// right: 2.8rem;
+				right: 0.5rem;
+				a {
+					svg {
+						// background-color: red;
+						padding: 0.2rem 0 0 0.2rem;
+						@media screen and (min-width: 375px) and (max-width: 413px) {
+							padding: 0.4rem 0.2rem 0 0rem;
+						}
+						@media screen and (min-width: 414px) and (max-width: 767px) {
+							padding: 0.4rem 0.2rem 0 0rem;
+						}
+						@media screen and (min-width: 768px) and (max-width: 1023px) {
+							padding: 0.4rem 0.2rem 0 0rem;
+						}
+						@media screen and (min-width: 1024px) {
+							padding: 0.4rem 0.2rem 0 0rem;
+						}
+					}
 				}
 			}
 			a {
 				// background-color: antiquewhite;
 				display: inline-block;
-				padding: 0.6rem 0rem 0rem 1.28rem;
+				padding: 0.4rem 0.7rem;
 				text-align: center;
-				font-size: 0.9rem;
-				min-width: 1.6rem;
-				min-height: 1.2rem;
+				font-size: $font-size-3;
+				// min-width: 1.6rem;
+				// min-height: 1.2rem;
 				@media screen and (min-width: 375px) and (max-width: 413px) {
-					font-size: 0.85rem;
-					padding-left: 1.5rem;
+					padding: 0.4rem 0.74rem;
 				}
 				@media screen and (min-width: 414px) and (max-width: 767px) {
-					font-size: 0.9rem;
-					padding-left: 1.4rem;
+					padding: 0.4rem 0.74rem;
 				}
 				@media screen and (min-width: 768px) and (max-width: 1023px) {
-					font-size: 0.95rem;
-					padding-left: 1.48rem;
+					padding: 0.4rem 0.82rem;
 				}
 				@media screen and (min-width: 1024px) {
-					font-size: 0.91rem;
-					padding-left: 1.66rem;
+					padding: 0.4rem 0.88rem;
 				}
 				.icon {
 					vertical-align: 0rem;

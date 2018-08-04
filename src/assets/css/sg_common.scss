@@ -1,7 +1,26 @@
 // 尺寸
-$app-max-width: 900px;
+$app-max-width: 900px; // 应用最大宽度
+$app-padding: 0.6rem; // 应用内边距
+$border-width: 0.05rem;  // 边框粗度
 
 // 颜色
-$body-bg-color: #f5f7f9;
+$body-bg-color: #f7f7f7;  // body背景色 
+$unit-bg-color: white;  // 组件背景色
+$border-color: #eee;  // 边框颜色
 
-// 字体
+$app-color-1: #26a2ff;  // app主颜色
+
+$text-color-1: #2c3e50;   // 文字主色
+$text-color-2: #b4b4b4;   // 文字辅色
+
+// 字体 
+$font-size-1: 1rem;
+$font-size-2: 0.9rem;
+$font-size-3: 0.8rem;
+$font-size-4: 0.74rem;
+$font-size-5: 0.7rem;
+$font-size-6: 0.64rem;
+
+
+
+// 混合器

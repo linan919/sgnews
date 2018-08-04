@@ -20,7 +20,10 @@
 		<!--  -->
 		<mt-tab-container v-model="sgNavSelected">
 			<mt-tab-container-item id="1">
+				<!-- 分类 -->
 				<SGNewsCat></SGNewsCat>
+				<!-- 今日要闻 -->
+				<SGTodayNews></SGTodayNews>
 			</mt-tab-container-item>
 			<mt-tab-container-item id="2">
 				<p>哈哈哈哈2222</p>
@@ -36,11 +39,14 @@
 
 // 脚本
 <script>
-import SGNewsCat from './components/SGNewsCat.vue'
+import SGNewsCat from './components/main_news/SGNewsCat.vue'
+import SGTodayNews from './components/main_news/SGTodayNews.vue'
+
 export default {
 	name: 'App',
 	components: {
-		SGNewsCat
+		SGNewsCat,
+		SGTodayNews
 	},
 	data: function(){
 		return {
@@ -55,11 +61,12 @@ export default {
 // 样式
 <style lang="scss">
 @import "./assets/css/sg_common.scss";
-@import "./src/assets/css/sg_flexable.scss";
+@import "./assets/css/sg_flexable.scss";
 
 #app {
 	max-width: $app-max-width;
 	margin: 2.5rem auto 0rem auto;
+	overflow: hidden;
 
 	font-family: 'Avenir', Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;

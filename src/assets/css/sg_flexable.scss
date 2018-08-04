@@ -51,7 +51,7 @@ body {
 		.mint-button {
 			height: auto;
 			.mint-button-text {
-				font-size: 0.74rem;
+				font-size: $font-size-4;
 				vertical-align: 0.05rem;
 				@media screen and (min-width: 375px) and (max-width: 413px) {
 					vertical-align: 0rem;
@@ -70,16 +70,16 @@ body {
 .mint-navbar {
 	margin: 0rem;
 	padding: 0rem;
-	border-bottom: 0.05rem solid #eee;
+	border-bottom: $border-width solid $border-color;
 	.mint-tab-item {
 		padding: 0.8rem 0rem 0.4rem 0rem;
-		font-size: 0.8rem;
+		// font-size: 0.8rem;
 		&.is-selected {
 			border-bottom: 0.1rem solid #26a2ff;
 			margin-bottom: 0;
 		}
 		.mint-tab-item-label {
-			font-size: 0.8rem;
+			font-size: $font-size-2;
 		}
 	}
 }
