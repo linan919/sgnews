@@ -1,28 +1,70 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld/>
-  </div>
+	<div id="app">
+		<!-- 顶部 -->
+		<mt-header class="sg-header" fixed title="SG新闻">
+			<mt-button slot="left">
+				<svg class="icon" aria-hidden="true"><use xlink:href="#icon-user"></use></svg>
+			</mt-button>
+			<mt-button class="sg-button" slot="right">
+				<svg class="icon" aria-hidden="true"><use xlink:href="#icon-email"></use></svg>
+				<span>邮箱</span>
+				<span><svg class="icon sg-small-icon" aria-hidden="true"><use xlink:href="#icon-unfold"></use></svg></span>
+			</mt-button>
+		</mt-header>
+		<!-- 导航 -->
+		<mt-navbar v-model="sgNavSelected">
+		<mt-tab-item id="1">要闻</mt-tab-item>
+		<mt-tab-item id="2">话题</mt-tab-item>
+		<mt-tab-item id="3">推荐</mt-tab-item>
+		</mt-navbar>
+		<!--  -->
+		<mt-tab-container v-model="sgNavSelected">
+			<mt-tab-container-item id="1">
+				<SGNewsCat></SGNewsCat>
+			</mt-tab-container-item>
+			<mt-tab-container-item id="2">
+				<p>哈哈哈哈2222</p>
+			</mt-tab-container-item>
+			<mt-tab-container-item id="3">
+				<p>哈哈哈哈33333</p>
+			</mt-tab-container-item>
+		</mt-tab-container>
+	</div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld'
 
+
+// 脚本
+<script>
+import SGNewsCat from './components/SGNewsCat.vue'
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+	name: 'App',
+	components: {
+		SGNewsCat
+	},
+	data: function(){
+		return {
+			sgNavSelected: '1'
+		}
+	}
 }
 </script>
 
-<style>
+
+
+// 样式
+<style lang="scss">
+@import "./assets/css/sg_common.scss";
+@import "./src/assets/css/sg_flexable.scss";
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+	max-width: $app-max-width;
+	margin: 2.5rem auto 0rem auto;
+
+	font-family: 'Avenir', Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-align: center;
+	color: #2c3e50;
 }
 </style>

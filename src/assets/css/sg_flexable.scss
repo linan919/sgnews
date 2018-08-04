@@ -1,0 +1,85 @@
+html {
+	@media screen and (max-width: 319px) {
+		font-size: 12px;
+	}
+	@media screen and (min-width: 320px) and (max-width: 374px) {
+		font-size: 16px;
+	}
+	@media screen and (min-width: 375px) and (max-width: 413px) {
+		font-size: 18px;
+	}
+	@media screen and (min-width: 414px) and (max-width: 767px) {
+		font-size: 20px;
+	}
+	@media screen and (min-width: 768px) and (max-width: 1023px) {
+		font-size: 35px;
+	}
+	@media screen and (min-width: 1024px) {
+		font-size: 40px;
+	}
+}
+
+body {
+	background-color: $body-bg-color;
+	margin: 0rem;
+	padding: 0rem;
+}
+
+// 图标
+.icon {
+	width: 0.9rem;
+	height: 0.9rem;
+	vertical-align: -0.2rem;
+	fill: currentColor;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+.sg-small-icon {
+	width: 0.5rem;
+	height: 0.5rem;
+	vertical-align: 0.15rem;
+}
+
+// 头部
+.mint-header {
+	height: auto;
+	max-width: $app-max-width;
+	margin: 0rem auto;
+	padding: 0rem 0.8rem;
+	font-size: 1rem;
+	.mint-header-button {
+		.mint-button {
+			height: auto;
+			.mint-button-text {
+				font-size: 0.74rem;
+				vertical-align: 0.05rem;
+				@media screen and (min-width: 375px) and (max-width: 413px) {
+					vertical-align: 0rem;
+				}
+			}
+		}
+	}
+	.mint-header-title {
+		margin: 0rem;
+		padding: 0.8rem 0rem;
+		font-size: 1rem;
+	}
+}
+
+// 导航
+.mint-navbar {
+	margin: 0rem;
+	padding: 0rem;
+	border-bottom: 0.05rem solid #eee;
+	.mint-tab-item {
+		padding: 0.8rem 0rem 0.4rem 0rem;
+		font-size: 0.8rem;
+		&.is-selected {
+			border-bottom: 0.1rem solid #26a2ff;
+			margin-bottom: 0;
+		}
+		.mint-tab-item-label {
+			font-size: 0.8rem;
+		}
+	}
+}
