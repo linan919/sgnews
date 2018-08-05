@@ -27,6 +27,9 @@ Vue.component(TabItem.name, TabItem);
 import { TabContainer, TabContainerItem } from 'mint-ui';
 Vue.component(TabContainer.name, TabContainer);
 Vue.component(TabContainerItem.name, TabContainerItem);
+// 图片懒加载
+import { Lazyload } from 'mint-ui';
+Vue.use(Lazyload);
 
 /* eslint-disable no-new */
 new Vue({

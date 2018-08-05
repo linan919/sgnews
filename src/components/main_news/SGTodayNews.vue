@@ -3,8 +3,7 @@
 	<div id="sg-today-news">
 		<h4>今日要闻</h4>
 		<!-- 要闻列表 -->
-		<SGTodayNew></SGTodayNew>
-		<SGTodayNew></SGTodayNew>
+		<SGTodayNew v-for="(sgNewItem,index) in sgNews" :key="sgNewItem+index" :sgPropNewItem="sgNewItem"></SGTodayNew>
 	</div>
 </template>
 
@@ -19,6 +18,21 @@ export default {
 	name: 'SGTodayNews',
 	components: {
 		SGTodayNew
+	},
+	data () {
+		return {
+			picURL: "/static/img/news_pic.jpg",
+			sgNews: [ //
+				{title:"燃！各军集结：使命不怠 百炼成军", pic:"/static/img/news_pic.jpg", author:"央视网", post_time:"2小时前", comments:235},
+				{title:"燃！各军集结：使命不怠 百炼成军", pic:"/static/img/news_pic.jpg", author:"央视网", post_time:"2小时前", comments:235},
+				{title:"燃！各军集结：使命不怠 百炼成军", pic:"/static/img/news_pic.jpg", author:"央视网", post_time:"2小时前", comments:235},
+				{title:"燃！各军集结：使命不怠 百炼成军", pic:"/static/img/news_pic.jpg", author:"央视网", post_time:"2小时前", comments:235},
+				{title:"燃！各军集结：使命不怠 百炼成军", pic:"/static/img/news_pic.jpg", author:"央视网", post_time:"2小时前", comments:235},
+				{title:"燃！各军集结：使命不怠 百炼成军", pic:"/static/img/news_pic.jpg", author:"央视网", post_time:"2小时前", comments:235},
+				{title:"燃！各军集结：使命不怠 百炼成军", pic:"/static/img/news_pic.jpg", author:"央视网", post_time:"2小时前", comments:235},
+				{title:"燃！各军集结：使命不怠 百炼成军", pic:"/static/img/news_pic.jpg", author:"央视网", post_time:"2小时前", comments:235}
+			]
+		}
 	}
 }
 </script>
