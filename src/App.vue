@@ -13,22 +13,22 @@
 		</mt-header>
 		<!-- 导航 -->
 		<mt-navbar v-model="sgNavSelected">
-		<mt-tab-item id="1">要闻</mt-tab-item>
-		<mt-tab-item id="2">话题</mt-tab-item>
-		<mt-tab-item id="3">推荐</mt-tab-item>
+		<mt-tab-item id="sg-tab-item-1">要闻</mt-tab-item>
+		<mt-tab-item id="sg-tab-item-2">话题</mt-tab-item>
+		<mt-tab-item id="sg-tab-item-3">推荐</mt-tab-item>
 		</mt-navbar>
 		<!--  -->
 		<mt-tab-container v-model="sgNavSelected">
-			<mt-tab-container-item id="1">
+			<mt-tab-container-item id="sg-tab-item-1">
 				<!-- 分类 -->
 				<SGNewsCat></SGNewsCat>
 				<!-- 今日要闻 -->
 				<SGTodayNews></SGTodayNews>
 			</mt-tab-container-item>
-			<mt-tab-container-item id="2">
+			<mt-tab-container-item id="sg-tab-item-2">
 				<p>哈哈哈哈2222</p>
 			</mt-tab-container-item>
-			<mt-tab-container-item id="3">
+			<mt-tab-container-item id="sg-tab-item-3">
 				<p>哈哈哈哈33333</p>
 			</mt-tab-container-item>
 		</mt-tab-container>
@@ -50,7 +50,7 @@ export default {
 	},
 	data: function(){
 		return {
-			sgNavSelected: '1'
+			sgNavSelected: 'sg-tab-item-1'
 		}
 	}
 }
