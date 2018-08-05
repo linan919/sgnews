@@ -12,7 +12,7 @@
 		</div>
 		<!-- 右  -->
 		<div class="sg-new-right">
-			<img id="sg-img" v-lazy="sgPropNewItem.pic" :alt="sgPropNewItem.title">
+			<img v-lazy="sgPropNewItem.pic" :alt="sgPropNewItem.title">
 		</div>
 	</div>
 </template>
@@ -93,7 +93,4 @@ export default {
 		}
 	}
 }
-// #sg-img[lazy=loading] {
-// 	opacity: 0;
-// }
 </style>
