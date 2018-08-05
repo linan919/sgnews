@@ -74,4 +74,48 @@ export default {
 	text-align: center;
 	color: #2c3e50;
 }
+
+// 头部
+.mint-header {
+	height: auto;
+	max-width: $app-max-width;
+	margin: 0rem auto;
+	padding: 0rem 0.8rem;
+	font-size: 1rem;
+	.mint-header-button {
+		.mint-button {
+			height: auto;
+			.mint-button-text {
+				font-size: $font-size-4;
+				vertical-align: 0.05rem;
+				@media screen and (min-width: 375px) and (max-width: 413px) {
+					vertical-align: 0rem;
+				}
+			}
+		}
+	}
+	.mint-header-title {
+		margin: 0rem;
+		padding: 0.8rem 0rem;
+		font-size: 1rem;
+	}
+}
+
+// 导航
+.mint-navbar {
+	margin: 0rem;
+	padding: 0rem;
+	border-bottom: $border-width solid $border-color;
+	.mint-tab-item {
+		padding: 0.8rem 0rem 0.4rem 0rem;
+		// font-size: 0.8rem;
+		&.is-selected {
+			border-bottom: 0.1rem solid #26a2ff;
+			margin-bottom: 0;
+		}
+		.mint-tab-item-label {
+			font-size: $font-size-2;
+		}
+	}
+}
 </style>

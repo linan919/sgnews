@@ -42,6 +42,7 @@ export default {
 	padding: 0rem $app-padding;
 	overflow: hidden;
 	border-top: $border-width solid $border-color;
+	border-bottom: $border-width solid $border-color;
 	h4 {
 		display: block;
 		margin: 0rem;

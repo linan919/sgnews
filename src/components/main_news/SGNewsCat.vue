@@ -18,7 +18,7 @@ export default {
 	data () {
 		return {
 			// 分类展开样式
-			sgListMaxHeight: '8rem',
+			sgListMaxHeight: '3.6rem',
 			// 分类项目数组 
 			catItems: [
 				{name:"本地",enName:"locale"},
@@ -45,7 +45,7 @@ export default {
 				{name:"教育",enName:"education"},
 				{name:"艺术",enName:"art"}
 			],
-			sgSpreadIcon: '<use xlink:href="#icon-fold"></use>'
+			sgSpreadIcon: '<use xlink:href="#icon-unfold"></use>'
 		}
 	},
 	methods: {
