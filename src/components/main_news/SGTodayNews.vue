@@ -23,14 +23,14 @@ export default {
 		return {
 			picURL: "/static/img/news_pic.jpg",
 			sgNews: [ //
-				{title:"燃！各军集结：使命不怠 百炼成军", pic:"/static/img/news_pic.jpg", author:"央视网", post_time:"2小时前", comments:235},
-				{title:"燃！各军集结：使命不怠 百炼成军", pic:"/static/img/news_pic.jpg", author:"央视网", post_time:"2小时前", comments:235},
-				{title:"燃！各军集结：使命不怠 百炼成军", pic:"/static/img/news_pic.jpg", author:"央视网", post_time:"2小时前", comments:235},
-				{title:"燃！各军集结：使命不怠 百炼成军", pic:"/static/img/news_pic.jpg", author:"央视网", post_time:"2小时前", comments:235},
-				{title:"燃！各军集结：使命不怠 百炼成军", pic:"/static/img/news_pic.jpg", author:"央视网", post_time:"2小时前", comments:235},
-				{title:"燃！各军集结：使命不怠 百炼成军", pic:"/static/img/news_pic.jpg", author:"央视网", post_time:"2小时前", comments:235},
-				{title:"燃！各军集结：使命不怠 百炼成军", pic:"/static/img/news_pic.jpg", author:"央视网", post_time:"2小时前", comments:235},
-				{title:"燃！各军集结：使命不怠 百炼成军", pic:"/static/img/news_pic.jpg", author:"央视网", post_time:"2小时前", comments:235}
+				{title:"燃！各军集结：使命不怠 百炼成军", pic:"./static/img/news_pic.jpg", author:"央视网", post_time:"2小时前", comments:235},
+				{title:"燃！各军集结：使命不怠 百炼成军", pic:"./static/img/news_pic.jpg", author:"央视网", post_time:"2小时前", comments:235},
+				{title:"燃！各军集结：使命不怠 百炼成军", pic:"./static/img/news_pic.jpg", author:"央视网", post_time:"2小时前", comments:235},
+				{title:"燃！各军集结：使命不怠 百炼成军", pic:"./static/img/news_pic.jpg", author:"央视网", post_time:"2小时前", comments:235},
+				{title:"燃！各军集结：使命不怠 百炼成军", pic:"./static/img/news_pic.jpg", author:"央视网", post_time:"2小时前", comments:235},
+				{title:"燃！各军集结：使命不怠 百炼成军", pic:"./static/img/news_pic.jpg", author:"央视网", post_time:"2小时前", comments:235},
+				{title:"燃！各军集结：使命不怠 百炼成军", pic:"./static/img/news_pic.jpg", author:"央视网", post_time:"2小时前", comments:235},
+				{title:"燃！各军集结：使命不怠 百炼成军", pic:"./static/img/news_pic.jpg", author:"央视网", post_time:"2小时前", comments:235}
 			]
 		}
 	}
