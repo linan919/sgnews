@@ -37,17 +37,7 @@
 
 export default {
 	name: 'SGTodayNew',
-	props: ['sgPropNewItem'],
-	data () {
-		return {
-			
-		}
-	},
-	computed: {
-	},
-	mounted () {
-		console.log(this.sgPropNewItem)
-	}
+	props: ['sgPropNewItem']
 }
 </script>
 

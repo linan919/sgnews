@@ -19,16 +19,19 @@
 		</mt-navbar>
 		<!--  -->
 		<mt-tab-container v-model="sgNavSelected">
-			<mt-tab-container-item id="sg-tab-item-1">
+			<!-- 要闻 -->
+			<mt-tab-container-item id="sg-tab-item-1" v-if="sgNavSelected==='sg-tab-item-1'">
 				<!-- 分类 -->
 				<SGNewsCat></SGNewsCat>
 				<!-- 今日要闻 -->
 				<SGTodayNews></SGTodayNews>
 			</mt-tab-container-item>
-			<mt-tab-container-item id="sg-tab-item-2">
-				<p>哈哈哈哈2222</p>
+			<!-- 话题 -->
+			<mt-tab-container-item id="sg-tab-item-2" v-if="sgNavSelected==='sg-tab-item-2'">
+				<SGTopics></SGTopics>
 			</mt-tab-container-item>
-			<mt-tab-container-item id="sg-tab-item-3">
+			<!-- 推荐 -->
+			<mt-tab-container-item id="sg-tab-item-3" v-if="sgNavSelected==='sg-tab-item-3'">
 				<p>哈哈哈哈33333</p>
 			</mt-tab-container-item>
 		</mt-tab-container>
@@ -41,12 +44,14 @@
 <script>
 import SGNewsCat from './components/main_news/SGNewsCat.vue'
 import SGTodayNews from './components/main_news/SGTodayNews.vue'
+import SGTopics from './components/topics/SGTopics.vue'
 
 export default {
 	name: 'App',
 	components: {
 		SGNewsCat,
-		SGTodayNews
+		SGTodayNews,
+		SGTopics
 	},
 	data: function(){
 		return {
