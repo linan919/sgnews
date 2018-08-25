@@ -13,27 +13,27 @@ Vue.config.productionTip = false
 
 
 // mint-ui组件
+import { Header, Button, Navbar,TabItem, TabContainer,TabContainerItem, Lazyload, Popup, Field} from 'mint-ui'
 // 头部
-import { Header } from 'mint-ui'
 Vue.component(Header.name, Header);
 // 按钮
-import { Button } from 'mint-ui'; 
 Vue.component(Button.name, Button);
 // 导航栏
-import { Navbar, TabItem } from 'mint-ui';
 Vue.component(Navbar.name, Navbar);
 Vue.component(TabItem.name, TabItem);
 // TabContainer
-import { TabContainer, TabContainerItem } from 'mint-ui';
 Vue.component(TabContainer.name, TabContainer);
 Vue.component(TabContainerItem.name, TabContainerItem);
 // 图片懒加载
-import { Lazyload } from 'mint-ui';
 Vue.use(Lazyload);
+// 弹出窗口
+Vue.component(Popup.name, Popup);
+// 表单
+Vue.component(Field.name, Field);
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  components: { App },
-  template: '<App/>'
+	el: '#app',
+	components: { App },
+	template: '<App/>'
 })

@@ -2,8 +2,10 @@
 	<div id="app">
 		<!-- 顶部 -->
 		<mt-header class="sg-header" fixed title="SG新闻">
-			<mt-button slot="left">
-				<svg class="icon" aria-hidden="true"><use xlink:href="#icon-user"></use></svg>
+			<mt-button slot="left" @click.native="sgLoginBtnClick">
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-user"></use>
+				</svg>
 			</mt-button>
 			<mt-button class="sg-button" slot="right">
 				<svg class="icon" aria-hidden="true"><use xlink:href="#icon-email"></use></svg>
@@ -11,6 +13,11 @@
 				<span><svg class="icon sg-small-icon" aria-hidden="true"><use xlink:href="#icon-unfold"></use></svg></span>
 			</mt-button>
 		</mt-header>
+		<!-- 登录 -->
+		<mt-popup v-model="sgLoginPopupShow" position="left">
+			<slot><SGPopupLogin></SGPopupLogin></slot>
+		</mt-popup>
+
 		<!-- 导航 -->
 		<mt-navbar v-model="sgNavSelected">
 		<mt-tab-item id="sg-tab-item-1">要闻</mt-tab-item>
@@ -32,7 +39,7 @@
 			</mt-tab-container-item>
 			<!-- 推荐 -->
 			<mt-tab-container-item id="sg-tab-item-3" v-if="sgNavSelected==='sg-tab-item-3'">
-				<p>哈哈哈哈33333</p>
+				<SGRecommends></SGRecommends>
 			</mt-tab-container-item>
 		</mt-tab-container>
 	</div>
@@ -45,17 +52,27 @@
 import SGNewsCat from './components/main_news/SGNewsCat.vue'
 import SGTodayNews from './components/main_news/SGTodayNews.vue'
 import SGTopics from './components/topics/SGTopics.vue'
+import SGRecommends from './components/recommends/SGRecommends.vue'
+import SGPopupLogin from './components/popups/SGPopupLogin.vue'
 
 export default {
 	name: 'App',
 	components: {
 		SGNewsCat,
 		SGTodayNews,
-		SGTopics
+		SGTopics,
+		SGRecommends,
+		SGPopupLogin
 	},
 	data: function(){
 		return {
-			sgNavSelected: 'sg-tab-item-1'
+			sgLoginPopupShow: false, //登录
+			sgNavSelected: 'sg-tab-item-1' //导航当前选择
+		}
+	},
+	methods: {
+		sgLoginBtnClick () {
+			this.sgLoginPopupShow = true
 		}
 	}
 }
@@ -104,6 +121,12 @@ export default {
 		padding: 0.8rem 0rem;
 		font-size: 1rem;
 	}
+}
+
+// 登录
+.mint-popup {
+	width: 70%;
+	height: 100%;
 }
 
 // 导航
