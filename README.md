@@ -1,7 +1,7 @@
 # sgnews
 
 > 某市新闻网站，是一款基于Vue.JS的移动端Web程序。
-> 预览链接：https://liginini.github.io/sgnews/
+> 预览链接：https://linan919.github.io/sgnews/
 
 所用到的框架包括：Vue、SASS、Mint UI，由于时间关系，目前只做了首页。
 
